@@ -1,10 +1,10 @@
 import axios from 'axios';
 import { useEffect } from 'react';
+import cn from 'classnames';
 
-import Quiz from './Quiz';
 import { MainLogoDark, FloterSmallDark, FloterSmallLight } from '../../assets/images';
 import { useQuiz, useQuizTheme } from '../../context/constants';
-import cn from 'classnames';
+import Quiz from './Quiz';
 
 const QuizContainer = () => {
   const { setQuestions, questions } = useQuiz();

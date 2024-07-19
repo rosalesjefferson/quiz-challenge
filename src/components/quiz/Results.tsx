@@ -1,4 +1,5 @@
 import { useNavigate } from "react-router-dom";
+
 import { useQuiz } from "../../context/constants";
 
 const Results = () => {
@@ -18,7 +19,6 @@ const Results = () => {
     setScore(0);
     setSelectedAnswer(null);
     setQuestions([]); 
-
     navigate('/')
 
   };

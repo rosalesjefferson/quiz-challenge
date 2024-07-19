@@ -1,4 +1,5 @@
 import { useNavigate } from 'react-router-dom';
+
 import { FloaterLarge, MainLogoLight, LongArrowRight } from '../../assets/images';
 
 const Landing = () => {

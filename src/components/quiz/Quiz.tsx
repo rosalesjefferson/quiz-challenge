@@ -39,7 +39,7 @@ const Quiz= () => {
     
   }, [theme, selectedAnswer])
 
-  if (questions?.length === 0) return <QuestionsLoader />;
+  if (!questions?.length) return <QuestionsLoader />;
 
   const currentQuestion = questions[currentQuestionIndex];
 
@@ -61,7 +61,7 @@ const Quiz= () => {
         Question {currentQuestionIndex + 1}/{questions?.length}
       </h2>
       <p className='text-3xl leading-[2.835rem] mb-14 text-center'>{currentQuestion?.question}</p>
-      <div className="flex flex-col gap-2 mb-8">
+      <div className="flex flex-col gap-4 mb-8">
         {Object.entries(currentQuestion.answers).map(([key, answer]) => (
           answer && (
             <button
@@ -91,23 +91,3 @@ const Quiz= () => {
 };
 
 export default Quiz;
-
-
-
-
-// const Choices = () => {
-
-// }
-
-  // if(theme === 'light') {
-      //   if(isChildren){
-      //       return isSelected ? 'border-secondary' : 'border-primary bg-primary text-secondary'
-      //   }
-
-      //   return `border-primary ${isSelected ? 'bg-primary text-secondary' : 'text-primary'}`
-      // }
-
-      // if(isChildren) {
-      //     return isSelected ? 'border-black-300' : 'border-secondary bg-secondary text-black-300'
-      // }
-      // return `border-secondary ${isSelected ? 'bg-secondary text-black-300' : 'text-secondary'}`
